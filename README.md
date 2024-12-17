@@ -83,6 +83,7 @@ RegisterNumber:24900992
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
+![Screenshot 2024-12-17 200318](https://github.com/user-attachments/assets/495fabfb-e141-41da-b4d4-60134a226134)
 
 **RESULTS**
 Thus,the code executed successfully.
