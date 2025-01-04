@@ -1,4 +1,6 @@
-# JKFLIPFLOP-USING-IF-ELSE
+### NAME : vasanthabalan K
+### REG NO : 24900992# EXP NO : 7
+# JKFLIPFLOP USING IF ELSE
 
 **AIM:** 
 
@@ -33,57 +35,64 @@ By using three variable K-Map, we can get the simplified expression for next sta
 The maximum possible groupings of adjacent ones are already shown in the figure. Therefore, the simplified expression for next state Qt+1t+1 is Q(t+1)=JQ(t)′+K′Q(t)Q(t+1)=JQ(t)′+K′Q(t)
 
 **Procedure**
-1.Go to quartus software.
 
-2.Set new environment.
 
-3.Type the code to implement SR flipflop using verilog and validating their functionality using their functional tables.
+step-1 Go to quartus software.
 
-4.Run the program.
+step-2 Set new environment.
 
-5.Give inputs in the waveform table.
+step-3 Type the code to implement SR flipflop using verilog and validating their functionality using their functional tables.
 
-6.Run the program.
+step-4 Run the program.
+
+step-5 Give inputs in the waveform table .
+
+step-6 Run the program.
+
+
 
 **PROGRAM**
-```
-module exp7(q, qb, j, k, clock, reset); 
-  input j, k, clock, reset; 
-  output reg q, qb; 
 
-  always @ (posedge clock) begin 
-    if (!reset) begin 
-      q <= q; 
-      qb <= qb; 
-    end 
-    else begin 
-      if (j == 0 && k == 0) begin 
-        q <= q; 
-        qb <= qb; 
-      end 
-      else if (j != k) begin 
-        q <= j; 
-        qb <= k; 
-      end 
-      else if (j == 1 && k == 1) begin 
-        q <= ~q; 
-        qb <= ~qb; 
-      end 
-    end 
-  end 
+module experiment7(J,K,c1k,q,qbar);
+input J,K,c1k;
+output reg q;
+output reg qbar;
+initial q=0;
+initial qbar=1;
+always @(posedge c1k)
+begin
+q=((J&(~q)))|((~K)&q);
+qbar=~q;
+end
 endmodule
-```
 
-/* Program for flipflops and verify its truth table in quartus using Verilog programming. Developed by:Vasanthabalan K
-RegisterNumber:24900992
-*/
+
+
 
 **RTL LOGIC FOR FLIPFLOPS**
-![exp7](https://github.com/user-attachments/assets/8cc6af68-04e3-4824-b469-fe818672f2bd)
+
+
+
+
+![image](https://github.com/user-attachments/assets/847d58cb-8e08-4b19-a5dd-2be33586d340)
+
+
+
 
 
 **TIMING DIGRAMS FOR FLIP FLOPS**
-![Screenshot 2024-12-17 200318](https://github.com/user-attachments/assets/495fabfb-e141-41da-b4d4-60134a226134)
+
+
+
+![image](https://github.com/user-attachments/assets/a7100f03-53a5-4b59-833c-bbf126ee943a)
+
+
+
+
+
 
 **RESULTS**
+
+
+
 Thus,the code executed successfully.
